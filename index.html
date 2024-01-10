@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'poppins',sans-serif;
+    }
+    body{
+        height: 200vh;
+        width: 100%;
+    }
+    .container{
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        background-color: #e4c4b5;
+    }
+    .question1,.question2,.question3,.question4,.question5{
+        height: 300px;
+        width: 500px;
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        padding-left: 50px;
+        margin: 10px;
+        background-color: #fff;
+        line-height: 30px;
+        text-transform: uppercase;
+        border-radius: 10px;
+    }
+    h3{
+        margin: 10px;
+    }
+    input{
+        margin: 5px;
+    }
+    #btn{
+        border: none;
+        outline: none;
+        padding: 10px;
+        background-color: #a43a07;
+        margin-top: 10px;
+        color: #fff;
+    }
+    #submit{
+        border: none;
+        outline: none;
+        padding: 10px;
+        background-color: rgb(164, 58, 7,0.9);
+        color: #fff;
+        margin: 10px;
+        font-weight: bolder;
+        letter-spacing: 1px;
+    }
+    #submit:hover{
+        transition: .3s;
+        background-color: #a43a07;
+    }
+    #Score{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        color: #000;
+        margin: 20px;
+        font-weight: bolder;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    }
+    @media screen and (max-width:625px) {
+        .container{
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        background-color: #e4c4b5;
+    }
+    .question1,.question2,.question3,.question4,.question5{
+        height: 300px;
+        width: 300px;
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        padding-left: 50px;
+        margin: 10px;
+        background-color: #fff;
+        line-height: 30px;
+        text-transform: uppercase;
+        border-radius: 10px;
+    }
+    }
+</style>
+</head>
+<body>
+    <script src="quiz.js"></script>
+    <div class="container">
+    <div class="question1">
+            <h3>1. which of the following is the library of Javascript ?</h3>
+        <div>
+            <input type="radio" id="wrong" name="q1" value="css" onclick="hello1()"><span>css</span>
+        </div> 
+        <div>
+            <input type="radio" id="right" name="q1" value="jquery" onclick="hello1()"><span>jquery</span>
+        </div>
+        <div>
+            <input type="radio" id="wrong" name="q1" value="python" onclick="hello1()"><span>python</span>
+        </div>
+        <div>
+            <input type="radio" id="wrong" name="q1" value="node-js" onclick="hello1()"><span>node-js</span>
+        </div>
+        <button id="btn" onclick="ans1()">Check Answer</button>
+        <div>
+            <span id="answer1" style="display: none;">Right answer : jquery</span>
+        </div>
+    </div>
+    <div class="question2">
+        <h3>2. which of the following is the framework of css ?</h3>
+    <div>
+        <input type="radio" id="wrong" name="q2" value="Bootstrap" onclick="hello2()"><span>Bootstrap</span>
+    </div> 
+    <div>
+        <input type="radio" id="right" name="q2" value="jquery" onclick="hello2()"><span>jquery</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q2" value="Ruby" onclick="hello2()"><span>Ruby</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q2" value="Rust" onclick="hello2()"><span>Rust</span>
+    </div>
+    <button id="btn" onclick="ans2()">Check Answer</button>
+    <div>
+        <span id="answer2" style="display: none;">Right answer : Bootstrap</span>
+    </div>
+
+    </div> 
+    <div class="question3">
+        <h3>3. What is LAN stand for ?</h3>
+    <div>
+        <input type="radio" id="wrong" name="q3" value="long area network" onclick="hello3()"><span>log area netwrok</span>
+    </div> 
+    <div>
+        <input type="radio" id="right" name="q3" value="line area network" onclick="hello3()"><span>line area network</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q3" value="local area network" onclick="hello3()"><span>local area network</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q3" value="None of the mentioned" onclick="hello3()"><span>None of the mentioned</span>
+    </div>
+    <button id="btn" onclick="ans3()">Check Answer</button>
+    <div>
+        <span id="answer3" style="display: none;">Right answer : Local Area Network</span>
+    </div>
+
+    </div> 
+    <div class="question4">
+        <h3>4. which of the following is command base language?</h3>
+    <div>
+        <input type="radio" id="wrong" name="q4" value="PHP" onclick="hello4()"><span>PHP</span>
+    </div> 
+    <div>
+        <input type="radio" id="right" name="q4" value="SQL" onclick="hello4()"><span>SQL</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q4" value="LARVEL" onclick="hello4()"><span>LARVEL</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q4" value="JAVA" onclick="hello4()"><span>JAVA</span>
+    </div>
+    <button id="btn" onclick="ans4()">Check Answer</button>
+    <div>
+        <span id="answer4" style="display: none;">Right answer : SQL</span>
+    </div>
+
+    </div>  
+    <div class="question5">
+        <h3>5. Who built the React-js?</h3>
+    <div>
+        <input type="radio" id="wrong" name="q5" value="google" onclick="hello5()"><span>google</span>
+    </div> 
+    <div>
+        <input type="radio" id="right" name="q5" value="amazon-cloud" onclick="hello5()"><span>amazon-cloud</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q5" value="meta" onclick="hello5()"><span>meta</span>
+    </div>
+    <div>
+        <input type="radio" id="wrong" name="q5" value="facebook" onclick="hello5()"><span>facebook</span>
+    </div>
+    <button id="btn" onclick="ans5()">Check Answer</button>
+    <div>
+        <span id="answer5" style="display: none;">Right answer : Facebook</span>
+    </div>
+    </div> 
+    <button id="submit" onclick="Submit()">Check Score</button>
+    <div id="Score">
+
+    </div>
+</div>
+</body>
+</html>
